@@ -1,0 +1,176 @@
+body {
+  padding: 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: rgb(84, 84, 84);
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.timeline-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 90vh;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+
+  border: 2px solid rgb(167, 167, 167);
+  border-radius: 15px;
+}
+
+.posts-list {
+  overflow: auto;
+}
+
+.posts-list-item {
+  position: relative;
+  padding: 15px;
+  padding-right: 100px;
+  margin-bottom: 20px;
+
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+
+.posts-list-item-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  font-size: 12px;
+}
+
+.posts-list-item-content {
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+.input-field-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 5px 10px;
+
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.input-field {
+  width: 100%;
+  height: 90%;
+  padding-right: 10px;
+  border: none;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.input-field-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  background-color: #fff;
+  cursor: pointer;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.audio-record-btn {
+  background-image: url(../img/icons8-микрофон-24.png);
+}
+
+.video-record-btn {
+  background-image: url(../img/icons8-камера-40.png);
+}
+
+.popup-text {
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.popup {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  padding: 20px 30px;
+  width: 40%;
+
+  border: 2px solid rgb(167, 167, 167);
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.popup-input {
+  width: calc(100% - 21px);
+  padding: 10px;
+  margin-bottom: 20px;
+
+  border-radius: 7px;
+  border: 1px solid grey;
+}
+
+.popup-input:focus {
+  outline: 1px solid rgb(104, 104, 104);
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.active {
+  display: block;
+}
+
+.popup-button {
+  padding: 10px 15px;
+
+  background-color: #fff;
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 7px;
+}
+
+.popup-button:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.mask::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.error {
+  margin-top: 0;
+  color: red;
+  font-weight: 500;
+}
